@@ -13,7 +13,7 @@
 
 ## 🖥️ Como usar
 
-1. Baixe o arquivo [Aqui](https://github.com/Miqueias722/Digitador/releases/download/v1.0.0/Digitador.exe)  
+1. Baixe o arquivo [aqui.](https://github.com/Miqueias722/Digitador/releases/download/v1.0.0/Digitador.exe)  
 2. Execute o programa  
 3. Cole o texto  
 4. Clique em "🚀 Iniciar Digitação"  
