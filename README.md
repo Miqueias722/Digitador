@@ -6,19 +6,19 @@
 
 ## ⚙️ Funcionalidades
 
-- Digitação automática com tempo configurável
-- Tema claro/escuro
-- Velocidade ajustável (Rápido, Padrão, Lenta)
-- Atalho para parar a digitação (padrão: F3)
+- Digitação automática com tempo configurável  
+- Tema claro/escuro  
+- Velocidade ajustável (Rápido, Padrão, Lenta)  
+- Atalho para parar a digitação (padrão: F3)  
 
 ## 🖥️ Como usar
 
-1. Baixe o arquivo `Digitador.exe`
-2. Execute o programa
-3. Cole o texto
-4. Clique em "🚀 Iniciar Digitação"
-5. Posicione o cursor no Redação Paraná
-6. Ele irá digitar tudo sozinho!
+1. Baixe o arquivo [`Aqui.`](https://github.com/Miqueias722/Digitador/releases/download/v1.0.0/Digitador.exe)  
+2. Execute o programa  
+3. Cole o texto  
+4. Clique em "🚀 Iniciar Digitação"  
+5. Posicione o cursor no Redação Paraná  
+6. Ele irá digitar tudo sozinho!  
 
 ## 📌 Requisitos
 
