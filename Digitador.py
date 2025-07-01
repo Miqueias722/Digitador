@@ -55,9 +55,9 @@ def digitar_texto(texto):
 
     # aqui define a velocidade de digitação de acordo com o que o usuário escolheu
     if config.velocidade == 'Rápido':
-        velocidade = 0.007
+        velocidade = 0.05 # a velocidade rápida maioria das vezes n funciona pelo limite de caracteres por segundo do redação paraná
     else:  # padrão é meio rápido
-        velocidade = 1 / 12
+        velocidade = 1 / 12 
 
     for char in texto:
         if parar:  # se apertar a tecla pra parar, sai do loop
