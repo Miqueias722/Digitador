@@ -34,12 +34,16 @@ def carregar_config():
             data = json.load(f)
             config.__dict__.update(data)
 
+carregar_config()
+
+# força voltar pra "Padrão" se for "Lenta"
+if config.velocidade == "Lenta":
+    config.velocidade = "Padrão"
+
 def salvar_config():
     # salva as config atuais no arquivo
     with open(config_path, 'w') as f:
         json.dump(config.__dict__, f)
-
-carregar_config()
 
 rodape_config = None
 parar = False
@@ -52,10 +56,8 @@ def digitar_texto(texto):
     # aqui define a velocidade de digitação de acordo com o que o usuário escolheu
     if config.velocidade == 'Rápido':
         velocidade = 0.007
-    elif config.velocidade == 'Lenta':
-        velocidade = 0.045
     else:  # padrão é meio rápido
-        velocidade = 1 / 22
+        velocidade = 1 / 12
 
     for char in texto:
         if parar:  # se apertar a tecla pra parar, sai do loop
@@ -182,7 +184,7 @@ def abrir_configuracoes():
     tema_combo.bind("<<ComboboxSelected>>", lambda e: (config.__setattr__('tema', tema_combo.get()), salvar_config(), aplicar_tema_total()))
 
     tk.Label(frame, text="Velocidade de Digitação:", fg=fg_color, bg=bg_color).grid(row=7, column=0, sticky="w")
-    velocidade_combo = ttk.Combobox(frame, values=["Rápido", "Padrão", "Lenta"], state="readonly")
+    velocidade_combo = ttk.Combobox(frame, values=["Rápido", "Padrão"], state="readonly")
     velocidade_combo.set(config.velocidade)
     velocidade_combo.grid(row=8, column=0, sticky="ew", pady=(0, 8))
 
@@ -190,7 +192,7 @@ def abrir_configuracoes():
         # quando mudar a velocidade, avisa que rápido pode dar ruim no Redação Paraná
         nova = velocidade_combo.get()
         if nova == "Rápido":
-            if not messagebox.askyesno("Aviso", "A opção 'Rápida' pode não ser aceita no Redação Paraná.\n\nA recomendada é 'Padrão' ou 'Lenta'.\n\nDeseja continuar mesmo assim?"):
+            if not messagebox.askyesno("Aviso", "A opção 'Rápida' pode não ser aceita no Redação Paraná.\n\nA recomendada é 'Padrão'.\n\nDeseja continuar mesmo assim?"):
                 velocidade_combo.set("Padrão")
                 return
         config.velocidade = nova
